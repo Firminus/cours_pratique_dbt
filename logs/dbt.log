@@ -1,0 +1,31 @@
+[0m11:46:25.623841 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fabd7e75cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fabd7995c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fabd5532e20>]}
+
+
+============================== 11:46:25.628405 | 578f7755-2b08-41b3-abea-66c56e1c2129 ==============================
+[0m11:46:25.628405 [info ] [MainThread]: Running with dbt=1.8.7
+[0m11:46:25.629366 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/home/admincciat/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init formation_dbt', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:46:25.640465 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object.. Dictionary: {'dir': PosixPath('/home/admincciat/.dbt')}
+[0m11:46:25.641092 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m11:46:25.642655 [debug] [MainThread]: Starter project path: /home/admincciat/.local/lib/python3.8/site-packages/dbt/include/starter_project
+[0m11:46:25.644608 [info ] [MainThread]: 
+Your new dbt project "formation_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:46:25.645139 [info ] [MainThread]: Setting up your profile.
+[0m11:46:36.192340 [info ] [MainThread]: Profile formation_dbt written to /home/admincciat/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m11:46:36.193180 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 10.626479, "process_user_time": 1.029864, "process_kernel_time": 0.087817, "process_mem_max_rss": "94336", "process_in_blocks": "672", "process_out_blocks": "80"}
+[0m11:46:36.193661 [debug] [MainThread]: Command `dbt init` succeeded at 11:46:36.193554 after 10.63 seconds
+[0m11:46:36.194071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fabd7e75cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fabd54e93a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fabd549d550>]}
+[0m11:46:36.194508 [debug] [MainThread]: Flushing usage events
