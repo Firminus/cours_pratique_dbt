@@ -13,3 +13,5 @@ onle pramettre selon son nom du projet et le output
  on cree en suite le dossier output : mkdir output
 on lance la commande dbt debug
  les donnes que j"ai envie d'utiliser: 'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet'
+ lancer un fichiers sql crere dans le cases du projet: .read 'analyses/analyse_exploratoire.sql'
+ sur vs code pour commenter c'est crtl+kc et decommenter ctrl+ku
