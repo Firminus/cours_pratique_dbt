@@ -1,0 +1,15 @@
+Resumé:
+les preeriquis:
+creer d'abor un repertoire sur  votre git
+cloner le reperttoire en local  :
+ce placer dans le repertoire
+creer ensuite un environnement virtuel avec : python3 -m venv .venv
+ensuite active l'environnent avec :  source .venv/bin/active
+lancer vscode avec: code.
+instatlation le paqueage dbt : pip install dbt-duckdb dbt
+initiation d'un brojet dbt: dbt init nom_formation_dbt
+creaation dedu fichion de conection : touch profiles.yml
+onle pramettre selon son nom du projet et le output
+ on cree en suite le dossier output : mkdir output
+on lance la commande dbt debug
+ les donnes que j"ai envie d'utiliser: 'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet'
