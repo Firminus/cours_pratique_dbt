@@ -1,0 +1,163 @@
+
+# Guide : Déployer un projet local sur GitHub avec Git
+
+## 1. Initialiser Git dans ton projet
+Va dans ton dossier de projet et initialise Git :
+```bash
+cd ~/cours_pratique_dbt/formation_dbt
+git init
+```
+👉 Cela crée un dépôt Git local dans ton projet.
+
+---
+## Verifier la liste des modifications ou dossiers
+git status
+
+
+## 2. Ajouter les fichiers à Git
+Ajoute tous les fichiers de ton projet au suivi de Git :
+```bash
+git add .
+```
+👉 Le point `.` signifie "ajoute tout".
+
+---
+
+## 3. Faire un premier commit
+Crée un commit avec un message explicatif :
+```bash
+git commit -m "Premier commit : ajout du projet formation_dbt"
+```
+👉 Le commit enregistre l’état actuel des fichiers dans Git.
+
+---
+
+## 4. Ajouter le dépôt distant (GitHub)
+Connecte ton projet local à ton dépôt GitHub :
+```bash
+git remote add origin https://github.com/Firminus/cours_pratique_dbt.git
+```
+👉 Ici, `origin` est le nom donné au dépôt GitHub.
+
+---
+
+## 5. Vérifier que le dépôt distant est bien configuré
+```bash
+git remote -v
+```
+👉 Tu dois voir :
+```
+origin  https://github.com/Firminus/cours_pratique_dbt.git (fetch)
+origin  https://github.com/Firminus/cours_pratique_dbt.git (push)
+```
+
+---
+
+## 6. Vérifier le nom de ta branche locale
+```bash
+git branch
+```
+👉 Résultat possible :
+- `* master` → ta branche s’appelle **master**
+- `* main` → ta branche s’appelle **main**
+
+---
+
+## 7. Envoyer ton projet sur GitHub
+Si ta branche est `master` :
+```bash
+git push -u origin master
+```
+Si ta branche est `main` :
+```bash
+git push -u origin main
+```
+
+👉 Le `-u` permet d’associer ta branche locale avec celle sur GitHub.  
+Ensuite, tu pourras simplement faire `git push` pour envoyer tes changements.
+
+---
+
+## 8. Pour chaque nouvelle modification
+À chaque fois que tu modifies ton projet, fais :
+```bash
+git add .
+git commit -m "Description des changements"
+git push
+```
+👉 Ainsi, tes modifications locales seront sauvegardées et envoyées sur GitHub.
+
+---
+
+🎉 Félicitations, ton projet est maintenant déployé sur GitHub !
+
+
+
+
+
+A FAIRE ABSOULUMENT :
+
+Solution
+
+Vérifie que ton dépôt existe bien :
+👉 https://github.com/Firminus/git-test
+
+(s’il n’existe pas, crée-le sur GitHub avant de faire git push).
+
+Génére un nouveau token avec droits complets :
+
+Va dans Settings > Developer settings > Personal Access Tokens > Tokens (classic)
+
+Clique Generate new token
+
+Coche au minimum :
+
+✅ repo (pour lecture/écriture sur tes dépôts)
+
+Copie le nouveau token.
+
+Mets à jour ton remote (si nécessaire, mais tu l’as déjà bien en HTTPS) :
+
+git remote set-url origin https://github.com/Firminus/git-test.git
+
+
+Re-pousse avec ton nouveau token :
+
+git push -u origin main
+
+
+Et quand Git demande le password → colle ton nouveau token. 
+
+===========================================================
+# 1. Créer une nouvelle branche et se placer dessus
+git checkout -b feature-login
+
+# 2. Ajouter les fichiers modifiés à l’index
+git add .
+
+# 2bis. Créer un commit avec un message clair
+git commit -m "Ajout du formulaire de login"
+
+# 3. Envoyer la branche vers GitHub/GitLab (si c'est la première fois : voir commande suivante)
+git push origin feature-login
+
+# 3bis. Première fois que tu pushes cette branche -> définir la branche distante
+git push --set-upstream origin feature-login
+
+# 4. Aller sur GitHub/GitLab pour créer une Pull Request (GitHub) ou Merge Request (GitLab)
+
+# 5. Après revue et validation, fusionner la branche dans main (à faire sur la plateforme)
+
+# 6. Supprimer la branche localement une fois fusionnée
+git branch -d feature-login
+
+# 6bis. Nettoyer les références de branches distantes supprimées
+git fetch -p
+
+
+
+
+
+
+
+

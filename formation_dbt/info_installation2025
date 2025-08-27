@@ -1,0 +1,28 @@
+Resumé:
+les preeriquis:
+creer d'abor un repertoire sur  votre git
+cloner le reperttoire en local  :
+ce placer dans le repertoire
+creer ensuite un environnement virtuel avec : python3 -m venv .venv
+ensuite active l'environnent avec :  source .venv/bin/active
+lancer vscode avec: code.
+instatlation le paqueage dbt : pip install dbt-duckdb dbt
+initiation d'un brojet dbt: dbt init nom_formation_dbt
+creaation dedu fichion de conection : touch profiles.yml
+onle pramettre selon son nom du projet et le output
+ on cree en suite le dossier output : mkdir output
+on lance la commande dbt debug
+les donnes que j"ai envie d'utiliser: 'https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet'
+lancer un fichiers sql crere dans le cases du projet: .read 'analyses/analyse_exploratoire.sql'
+sur vs code pour commenter c'est crtl+kc et decommenter ctrl+ku
+renomée les models/exemples au models/taxi_trips  qui sera notre projet ou  jeu de données
+Ensuite  on supprime tous les fichiers  sql : rm models/taxi_trips/*.sql
+ensuite crerer le fichiers source  dans  models/taxi_trips : touch source.yml
+dans le fichier  dbt_project.yml ajouter le noms du models: taxi_trips
+et je creer  transform.sql dna lequel je peux mettre des requetes qui vont s'enregistrer dans une bae de donnes sous forme de table
+Apres toutes transformation lancer toujours dbt run....
+Run dbt deps to install the package
+=====================================
+pour crere une allias : ATTACH 'output/transformed_data.db' AS transformed_db ;
+
+
